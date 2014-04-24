@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>T&iacute;tulo del trabajo</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>Usuarios en el AD (Active directory)</i></li>
+    <li><b>Componentes del grupo:</b> <i>Eliot Farrais García</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>24 de abril de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Instalación del AD</a> | <a href='#bloque2'>Unión al dominio</a> | <a href='#bloque3'>Configuración de grupos y usuarios</a> | <a href='#final'>Conclusiones</a>
+</div>
+<h1><a id='bloque1'>Instalación del AD</a></h1>
+<ul>
+	<li><p>Ejecutamos "dcpromo.exe" en la consola de comandos. En la ventana que nos sale le damos siguiente, nos sale esto, le damos a siguiente:</p>
+		<img title="imagen-servidor" alt="servidor" src="img/ad1.png" border="1" height="400" width="400">
+	</li>
+	<li><p>En la siguiente ventana lo dejamos como está:</p>
+		<img title="imagen-servidor2" alt="servidor" src="img/ad2.png" border="1" height="400" width="400">
+	</li>
+	<li><p>En la siguiente ventana lo dejamos como está:</p>
+		<img title="imagen-servidor3" alt="servidor" src="img/ad3.png" border="1" height="400" width="400">
+	</li>
+	<li><p>En la siguiente ventana lo dejamos como está:</p>
+		<img title="imagen-servidor4" alt="servidor" src="img/ad4.png" border="1" height="400" width="400">
+	</li>
+	<li><p>En la siguiente ventana lo dejamos como está:</p>
+		<img title="imagen-servidor5" alt="servidor" src="img/ad5.png" border="1" height="400" width="400">
+	</li>
+	<li><p>Dejando todas las configuraciones por defecto, se empieza a instalar el AD (Active Directory). Una vez finalizado, reiniciamos el sistema:</p>
+		<img title="imagen-servidor6" alt="servidor" src="img/ad6.png" border="1" height="400" width="400">
+	</li>
+</ul>
+<h1><a id='bloque2'>Unión al dominio</a></h1>
+	<ul>
+		<ol>
+			<li>
+				<p>Para unirnos al dominio, iremos a las propiedades del sistema en el cliente. Una vez ahí nos vamos a configuración avanzada del sistema</p>
+				<img title="imagen-servidor20" alt="servidor" src="img/ad20.png" border="1" height="400" width="500">
+			</li>
+			<li>
+				<p>Buscaremos En la parte superior nombre de equipo, y vamos a cambiar. Selecionamos Dominio, y escribiremos el nombre del dominio.<br>
+				Si lo hemos hecho todo correctamente nos saldrá un mensaje de unión al dominio correctamente.es importante saber que para la unión al dominio
+				debemos poner la ip del servidor como dns primario, y también tener la misma zona horaria y hora del sistema, en el servidor y cliente</p>
+				<img title="imagen-servidor30" alt="servidor" src="img/ad30.png" border="1" height="400" width="500">
+			</li>
+		</ol>
+		<ul>
+			<li>
+				<p>Comprobamos que estamos unidos al dominio</p>
+				<p>Equipo administrador:</p>
+				<p><img title="imagen-servidor19" alt="servidor" src="img/ad19.png" border="1" height="400" width="500"></p>
+				<p>Equipos clientes:</p>
+				<p>Equipo A</p>
+				<p><img title="imagen-servidor20" alt="servidor" src="img/ad20.png" border="1" height="400" width="500"></p>
+				<p>Equipos B</p>
+				<p><img title="imagen-servidor21" alt="servidor" src="img/ad21.png" border="1" height="400" width="500"></p>
+			</li>
+		</ul>
+	</ul>
+<ul>
+	<h1><a id='bloque3'>Configuración de grupos y usuarios</a></h1>
+		<ol type='1'>
+			<li><h2>Agregar usuarios y grupos:</h2></li>
+				<ul>
+					<li><p>Para agregar un usuario, ejecutamos por la consola el comando: dsa.msc. </p>
+						<p>En la parte izquierda, en la pestaña users, pulsamos clic derecho, y en el submenu vamos a: Nuevo -> Usuario <br> Agregando así a todos los usuarios</p>
+						<img title="imagen-servidor9" alt="servidor" src="img/ad9.png" border="1" height="400" width="400">
+					</li>
+					<li><p>Para agregar un grupo, ejecutamos por la consola el comando: dsa.msc. </p>
+						<p>En la parte izquierda, en la pestaña users, pulsamos clic derecho, y en el submenu vamos a: Nuevo -> grupo <br> Agregando así a todos los grupos necesarios</p>
+						<img title="imagen-servidor8" alt="servidor" src="img/ad8.png" border="1" height="400" width="400">
+					</li>
+					<li><p>Nos quedan así todos los usuarios y grupos añadidos</p>
+						<img title="imagen-servidor11" alt="servidor" src="img/ad11.png" border="1" height="400" width="400">
+					</li>
+				</ul>
+			<li><h2>Configuración de usuarios. Perfiles moviles y Perfiles moviles obligatorios:</h2></li>
+				<ul>
+					<li><h3>Configuración de Perfiles Moviles</h3>
+						<ol>
+							<li>
+								<p>Tendremos que compartir una carpeta en la red, donde se guardarán los perfiles, terminando el nombre en $.
+								<br>(El dolar "$" hará que la carpeta compartida esté oculta). Como por ejemplo perfiles$. Esta carpeta debe tener permisos de Control total para todos</p>
+								<img title="imagen-servidor18" alt="servidor" src="img/ad18.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>Ejecutaremos el comando dsa.msc, y en el usuario que queramos configurar le daremos clic derecho e iremos a Propiedades.
+								<br> para nuestro ejemplo usaremos el usuario obiwan. una vez que se nos abre una ventana, en la parte superior buscamos perfil</p>
+								<p>Una vez en perfil, en ruta de acceso colocamos la dirreción de red al carpeta compartida más la variable %USERNAME%, quedando así:</p>
+								<img title="imagen-servidor22" alt="servidor" src="img/ad22.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>Iniciamos sesión en el cliente para comprobar que efectivamente, no nos da error la configuración </p>
+								<img title="imagen-servidor23" alt="servidor" src="img/ad23.png" border="1" height="500" width="400">
+								<br>
+								<img title="imagen-servidor24" alt="servidor" src="img/ad24.png" border="1" height="400" width="500">
+							</li>
+					<li><h3>Configuración de Perfiles Moviles obligatorios</h3>
+						<ol>
+							<li>
+								<p>Esta configuración nos permite no realizar modificaciones en los usuarios<br>
+								Para esto debemos primero debemos entrar en un cliente, como administradores</p>
+								<p>Una vez dentro nos situamos en Inicio -> Equipo, y le damos un clic derecho. En el submenú le damos un clic izquierdo a Propiedades</p>
+								<img title="imagen-servidor21" alt="servidor" src="img/ad21.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>En las propiedades del sistema, en la parte izquierda superior, le hacemos un clic en Configuración avanzada del sistema. Le damos configuración de usuarios </p>
+								<img title="imagen-servidor25" alt="servidor" src="img/ad25.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>Selecionamos perfil predeterminado, y damos un clic izquierdo en Copiar a... . Elejimos la ruta de red y la carpeta donde irá el perfil obligatorio</p>
+								<img title="imagen-servidor26" alt="servidor" src="img/ad26.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>Debajo, en los permisos, le damos a cambiar y elejimos Usuarios autentificados.Luego le damos a aceptar y nos saldrá un mensaje como que la copia del perfil se ha hecho correctamente</p>
+								<img title="imagen-servidor27" alt="servidor" src="img/ad27.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>Ahora nos vamos al servidor, y en la carpeta compartida donde se guardan los perfiles, tiene que estar el perfil que hemos copiado anteriormente.<br>
+								 Buscamos el archivo ntuser.dat y renombramos su extensión a ntuser.man</p>
+								<img title="imagen-servidor29" alt="servidor" src="img/ad29.png" border="1" height="400" width="400">
+							</li>
+							<li>
+								<p>Creamos el usuario como hacemos para crear un usuario movil descrito en el apartado anterior.</p>
+								<p>cuando especifiquemos la ruta elejiremos la ruta en la que copiamosel perfil predeterminado en el servidor</p>
+								<img title="imagen-servidor28" alt="servidor" src="img/ad28.png" border="1" height="400" width="400">
+							</li>
+						</ol>
+					</li>
+				</ul>
+</ul>
+<h1><a id='final'>Conclusiones</a></h1>
+<p>Para hacer los perfiles moviles obligatorios, se usó la siguiente documentación, adaptandola a la practica:<br></p>
+<p>http://support.microsoft.com/kb/973289/es</p>
+</body>
+</html>
