@@ -19,7 +19,7 @@
   </div>
 </div>
 <div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
-<a href='#bloque1'>Windows</a> | <a href='#bloque2'>Linux</a> | <a href='#final'>Conclusiones</a>
+<a href='#bloque1'>Windows</a> | <a href='#bloque2'>Linux</a> 
 </div>
 <h1><a id='bloque1'>Windows</a></h1>
 <h2>Auditoría en Windows 7</h2>
@@ -50,15 +50,55 @@
 			<p>Descargamos el programa webadmin</p>
 			<img src='./imagenes/5.png'/>
 		</li>
+		<li>
+			<p>Instalamos el paquete Webmin</p>
+			<img src='./imagenes/6.png'/>
+		</li>
+		<li>
+			<p>Iniciamos el servicio Webmin</p>
+			<img src='./imagenes/7.png'/>
+		</li>
+		<li>
+			<p>Accedemos de manera local por: "https://localhost:10000".<br>Ponemos de Username el nombre del usuario y de contraseña, la contraseña del usuario administrador</p>
+			<img src='./imagenes/8.png'/>
+		</li>
+		<li>
+			<p>Accedemos a System -> System Log</p>
+			<img src='./imagenes/9.png'/>
+		</li>
+		
 	</ul>
 <h3>Comandos</h3>
 	<ul>
 		<li>
-			<p></p>
-			<img src='./imagenes/1.png'/>
+			<p>Consultamos el archivo: /etc/rsyslog.d/50-default.conf<br>
+			Añadimos la linea: local0.* /var/log/nombredelalumno/prueba-local.log</p>
+			<img src='./imagenes/10.png'/>
+		</li>	
+		<li>
+			<p>Con el usuario root, creamos el fichero:<br>
+			/var/log/eliot/prueba-local.log</p>
+			<img src='./imagenes/11.png'/>
+		</li>
+		<li>
+			<p>Reiniciamos el servicio rsyslog</p>
+			<img src='./imagenes/12.png'/>
+		</li>
+		<li>
+			<p>Comprobamos que funciona correctamente</p>
+			<img src='./imagenes/13.png'/>
 		</li>
 	</ul>
-<h1><a id='final'>Conclusiones</a></h1>
-<p>Bla bla bla bla...</p>
+	<h4>Logrotate</h4>
+	<ul>
+		<li>
+			<p>Generamos muchos mensajes para producir un logrotate</p>
+			<img src='./imagenes/14.png'/>
+		</li>
+		<li>
+			<p>Comprobamos que aumentó de tamaño</p>
+			<img src='./imagenes/15.png'/>
+		</li>
+	</ul>
 </body>
 </html>
