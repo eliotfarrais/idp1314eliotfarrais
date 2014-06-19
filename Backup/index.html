@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>T&iacute;tulo del trabajo</title>
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>A2: Recursos compartidos (Comandos)</i></li>
+    <li><b>Componentes del grupo:</b> <i>Eliot farrais García </i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i> 21 de febrero de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Preparativos Samba</a> | <a href='#bloque2'>Acceso por comandos</a> | <a href='#final'>Acceso por GUI</a>
+</div>
+<h1><a id='bloque1'>Preparativos samba</a></h1>
+<ul>
+	<li>
+		<p>Vamos a GNU/Linux, y creamos los siguientes grupos y usuarios:
+			Grupo informaticos con info1, info2 y supersamba
+			Grupo panaderos con pan1 y pan2 y supersamba
+			Crear el usuario smbguest.</p>
+			<p>Creamos los usuarios</p>
+			<img src='./imagenes/1.png'/>
+			<p>Creamos los grupos</p>
+			<img src='./imagenes/2.png'/>
+	</li>
+	<li>
+		<p>Creamos las carpetas con sus permiso </p>
+		<img src='./imagenes/3.png'/>
+	</li>
+	<li>
+		<p>Hacemos una copia de seguridad del archivo y creamos uno de nuevo</p>
+		<img src='./imagenes/4.png'/>
+		<img src='./imagenes/5.png'/>
+	</li>
+	<li>
+		<p>Añadimos los usuarios a samba</p>
+		<img src='./imagenes/6.png'/>
+	</li>
+	<li>
+		<p>Reiniciamos el servicio Samba</p>
+		<img src='./imagenes/7.png'/>
+	</li>
+	<li>
+		<p>Configuramos la red</p>
+		<img src='./imagenes/8.png'/>
+	</li>
+</ul>
+<h1><a id='bloque2'>Acceso por comandos</a></h1>
+<ul>
+	<li>
+		<p>Primero comprobar el uso de las siguientes herramientas:
+			smbtree
+			smbclient --list ip-servidor-samba</p>
+		<img src='./imagenes/9.png'/>	
+	</li>
+	<li>
+		<p>Ahora creamos el montaje local</p>
+		<img src='./imagenes/10.png'/>	
+	</li>
+	<li>
+		<p>Vemos que el recurso ha sido montado</p>
+		<img src='./imagenes/11.png'/>	
+	</li>
+</ul>
+<h1><a id='final'>Acceso por GUI</a></h1>
+<ul>
+	<li>
+		<p>Nos vamos a entornos de red y elejimos panaderos<br>
+		Ponemos usuario y contraseñas de pan1</p>
+		<p>Y accedemos al recurso</p>
+		<img src='./imagenes/12.png'/>
+	</li>
+</ul>
+</body>
+</html>
